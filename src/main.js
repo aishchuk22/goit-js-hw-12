@@ -9,6 +9,7 @@ import "simplelightbox/dist/simple-lightbox.min.css";
 import { fetchImages } from "./js/pixabay-api.js";
 import { createMarkup } from "./js/render-functions.js";
 
+const body = document.querySelector("body");
 const form = document.querySelector(".form");
 const input = document.querySelector(".input-text");
 const gallery = document.querySelector(".gallery");
@@ -107,6 +108,7 @@ async function onLoadBtn() {
 
     if ((page * perPage) >= imagesReceived.totalHits) {
         loadBtn.style.display = "none";
+        body.style.paddingBottom = 0;
         iziToast.show({
             title: "Hey!",
             titleSize: "18px",
