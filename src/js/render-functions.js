@@ -1,6 +1,6 @@
 // У файлі render-functions.js створи функції для відображення елементів інтерфейсу.
 
-export function markup(arr) {
+export function createMarkup(arr) {
     return arr.map(({ webformatURL, largeImageURL, tags, likes, views, comments, downloads }) =>
          `<li class="gallery-item">
           <a class="gallery-link" href="${largeImageURL}">
