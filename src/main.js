@@ -36,6 +36,7 @@ async function handleSubmit(event) {
     gallery.innerHTML = "";
     loader.style.display = "block";
     loadBtn.style.display = "none";
+    body.style.paddingBottom = "44px";
 
     query = input.value.trim();
     
@@ -116,7 +117,7 @@ async function onLoadBtn() {
             position: "topRight"
         });
     } else {
-      loadBtn.style.display = "block";
+        loadBtn.style.display = "block";
     }
     } catch (error) {
       iziToast.error({
